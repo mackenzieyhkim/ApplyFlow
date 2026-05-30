@@ -1,0 +1,171 @@
+PROFESSIONAL PROFILE — MACKENZIE KIM
+mackenziekim9@gmail.com, (437)-345-3494, linkedin.com/in/-mackenzie-kim
+ 
+OVERVIEW
+
+Mackenzie Kim is a Mechanical Engineering student at Toronto Metropolitan University
+(formerly Ryerson), currently in the Bachelor of Engineering program (Sept 2024 –
+May 2029), maintaining a GPA of approximately 3.00 / 4.33. A multidisciplinary
+engineering student with a uniquely broad skill set spanning mechanical design,
+embedded systems, software development, robotics, financial coordination, and
+organizational leadership. Mackenzie brings real industry experience from a
+co-op placement at Multimatic Inc., active involvement in multiple student
+organizations, and a growing portfolio of hands-on technical projects. Known for
+being a collaborative team player who can operate across technical and
+non-technical domains with equal effectiveness.
+ 
+ 
+EXPERIENCE
+ 
+Engineering Placement Student — Multimatic Inc., Markham, ON (Feb 2024 – Jun 2024)
+Mackenzie's first industry role, completed at Multimatic Inc., a Tier 1 OEM
+automotive supplier. In this placement, Mackenzie contributed directly to
+precision tooling fabrication and assembly supporting high-precision manufacturing
+lines. Responsibilities included in-process dimensional inspection and verification
+using blueprint reading and GD&T standards, identifying production deviations and
+recommending corrective actions. Mackenzie applied design-for-manufacturability
+(DFM) and continuous improvement principles alongside senior engineers, gaining
+practical exposure to quality assurance, tolerance analysis, and regulated
+industrial manufacturing practices. The role also involved supporting validation
+testing, technical documentation, and workflow compliance in a fast-paced,
+zero-defect production environment.
+ 
+Finance Coordinator — TMU Velocity Design Team, Toronto, ON (Sept 2025 – Present)
+As Finance Coordinator for a 20–30 member multidisciplinary engineering design
+team, Mackenzie oversees all budgeting, expense tracking, and financial reporting
+operations. This includes building detailed cost models to optimize resource
+allocation across design subteams, preparing financial presentations for sponsors
+and executive stakeholders to secure continued funding, and coordinating with
+technical subteams to align financial planning with project timelines and
+engineering needs. In one instance, Mackenzie also collaborated directly with the
+electrical subteam on electronics packaging and harness routing, applying spatial
+constraint analysis and design-for-assembly principles to improve component
+accessibility on the vehicle.
+ 
+Technology Associate — TMU Korean Student Association, Toronto, ON (Apr 2025 – Present)
+In this software-focused role, Mackenzie collaborated with a 5-member team to
+design, develop, and deploy a full responsive web application using React.js, JSX,
+CSS, and MongoDB. The platform serves 100+ students and 10+ sponsors and includes
+an attendance and participation tracking system. Mackenzie applied Agile/Scrum
+methodologies for sprint planning and deliverable management, used GitHub branching
+strategies to streamline version control and code review, and improved sprint
+completion rate by 15%. The role demonstrated strong full-stack development ability
+and cross-functional collaboration in a product team environment.
+ 
+VP Internals — TMU Korean Student Association, Toronto, ON (Mar 2026 – Present)
+Promoted to VP Internals, Mackenzie now leads internal operations and coordination
+across executive teams. Responsibilities include managing communication systems,
+logistics, and the execution of organizational initiatives. Mackenzie designed and
+deployed a centralized organizational website to streamline information access and
+improve member engagement, and has worked to improve internal workflows and
+communication processes across event planning and coordination functions.
+ 
+Lifeguard — City of Markham, Markham, ON (Jun 2022 – Feb 2024)
+Maintained safety compliance and vigilance in high-traffic, high-risk aquatic
+environments. Responded to emergency situations following established safety
+protocols and collaborated with team members to ensure smooth daily facility
+operations.
+ 
+Math Tutor — Mathnasium, Markham, ON (Feb 2023 – Apr 2025)
+Provided individualized math support to students, strengthening problem-solving
+and analytical skills. Communicated academic progress clearly to students and
+guardians.
+ 
+Student Teacher (Computer Engineering) — St. Brother Andre, Markham, ON (Jan 2024 – Jun 2024)
+Designed and delivered lesson plans, slide decks, and lab activities aligned with
+curriculum objectives. Led hands-on Arduino and Python projects to teach
+foundational hardware and programming concepts to high school students, providing
+individual support and clear technical instruction throughout the course.
+ 
+Prep Cook — Bear Steak Sandwiches, Toronto, ON (Jun 2025 – Oct 2025)
+Prepared ingredients and components in a high-volume kitchen environment, ensuring
+consistent food quality and adherence to food safety standards. Supported efficient
+line operations through organized mise en place, timely prep execution, and
+effective communication with kitchen staff in a fast-paced service setting.
+ 
+ 
+PROJECTS
+ 
+Autonomous Car Platform | Python, ROS2, LiDAR, SLAM, Path Planning (Sept 2025 – Present)
+An ongoing robotics project conducted in collaboration with the TMU Autonomous
+Vehicle Lab (AVL). Mackenzie contributes to an autonomous vehicle system using
+ROS2 and Python, working on perception, localization, and real-time navigation
+pipelines using LiDAR sensor data. The work involves applying SLAM and path
+planning algorithms for obstacle avoidance and route execution, with a focus on
+hardware-software integration, sensor fusion, iterative debugging, and technical
+documentation to improve system reliability and navigation consistency.
+ 
+Self-Parking Wind-Up Car | SolidWorks, Gear Design, Laser Cutting (Mar 2026 – Apr 2026)
+A constrained mechanical design project where Mackenzie fully CAD-modeled a
+wind-up self-parking mechanism in SolidWorks under strict size, material, and
+fabrication constraints. The design featured a Geneva drive with calculated gear
+ratios to achieve timed intermittent steering, enabling reliable block-clearing
+and self-parking across competitive trials. Mackenzie produced fabrication-ready
+drawings and laser-cut files with full tolerancing for kerf, moving-part
+clearances, and assembly alignment.
+ 
+Ergonomic Tire Changing System | SolidWorks (Sept 2025 – Dec 2025)
+A 4-member multidisciplinary team project to design and prototype an ergonomic
+tire-changing system. Mackenzie applied tolerance analysis, GD&T, and failure
+mode analysis throughout the design lifecycle, contributing to a 30% reduction in
+manual effort and improved user safety. Co-authored a formal technical design
+report documenting simulation results, design trade-offs, failure analysis, and
+process improvement recommendations to academic and professional standards.
+ 
+Go Kart Steering Assembly | SolidWorks (May 2024 – Jun 2024)
+Designed and fully modeled a go kart steering assembly in SolidWorks, producing
+GD&T-compliant engineering drawings and fabrication instructions. Fabricated all
+components using TIG welding, presses, and precision machining. Validated assembly
+performance through alignment and motion testing, iterating on CAD models to
+correct misalignments and ensure structural reliability and consistent steering
+response.
+ 
+WiFi Remote Controlled Car | C++, ESP8266, Embedded Systems (May 2024 – Jun 2024)
+Built a small-scale remotely controlled vehicle using an ESP8266 microcontroller
+configured as a wireless server with IP validation. Integrated gyroscope sensor
+data and PWM signal control for steering and throttle response. Designed and
+prototyped a complete electrical schematic for component wiring, demonstrating
+end-to-end hardware-software integration including embedded systems programming,
+circuit design, and iterative testing.
+
+Korean Student Association Website & Member Tracking Platform | React.js, JSX, CSS, MongoDB (Apr 2025 – Present)
+Developed a responsive web platform for the TMU Korean Student Association to centralize event information, stakeholder communication, and member engagement. Built the front-end using React.js, JSX, and CSS, creating reusable components and a clean interface for students, executives, and sponsors. Integrated MongoDB to support tracking of stakeholders, participating members, attendance, and engagement records across KSA events. Collaborated with a 5-member team using GitHub version control and Agile/Scrum workflows to improve development organization, sprint delivery, and long-term maintainability.
+ 
+ 
+SKILLS
+ 
+Mechanical & Design:
+  SolidWorks (CSWA certified, CSWP in progress), AutoCAD (foundational),
+  GD&T & Tolerance Analysis, Design for Manufacturability (DFM),
+  Dimensional Inspection & Verification, Electrical Schematic Design,
+  Machining (mills, lathes), TIG Welding, Prototyping & Fabrication,
+  Gear Design, Root Cause Analysis, System Validation & Testing,
+  PLC Familiarity, Sensors & Instrumentation
+ 
+Software & Programming:
+  Python, C/C++, JavaScript, React.js (JSX), CSS3, HTML5,
+  MongoDB, SQL, GitHub (branching, version control),
+  Arduino, ESP8266, MATLAB, ROS2
+ 
+Robotics & Autonomous Systems:
+  LiDAR, SLAM, Path Planning, Sensor Fusion, Hardware-Software Integration,
+  Autonomous Navigation, ROS2 Workflows
+ 
+Data & Reporting:
+  Microsoft Excel, PowerPoint, Word, Data Collection & Analysis,
+  Performance Trend Identification, Cost Modeling, Financial Reporting,
+  Evidence-Based Recommendations, Power BI / Tableau (exposure)
+ 
+Project & Program Management:
+  Agile/Scrum Methodology, Sprint Planning, Milestone Tracking,
+  Workflow Mapping, Budgeting & Expense Tracking, Resource Allocation,
+  Cross-Functional Coordination, Technical Documentation,
+  Stakeholder Communication, Continuous Improvement
+ 
+Transferable:
+  Problem Solving, Attention to Detail, Time Management, Collaboration,
+  Technical Communication & Reporting, Adaptability, Self-Motivation,
+  Tact, Dependability, Rapid Learning
+ 
+Certifications & Additional:
+  Smart Serve Certified, Standard First Aid & CPR-C with AED
