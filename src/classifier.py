@@ -42,6 +42,36 @@ Qualifications: {qualifications}
 Responsibilities: {responsibilities}
 """
 
+RESUME_PROMPT = """
+You are an expert resume writer.
+
+Using the candidate profile and job posting below:
+
+1. Select the 3 most relevant experiences and 2 most relevant projects.
+2. Rewrite each experience into 3 ATS optimized bullet points.
+3. Use keywords from the job posting naturally.
+4. Do not invent experience.
+5. Quantify achievements where possible.
+
+Return plain text only.
+
+CANDIDATE PROFILE:
+{profile}
+
+JOB POSTING:
+Title: {title}
+Company: {company}
+
+Skills:
+{skills}
+
+Qualifications:
+{qualifications}
+
+Responsibilities:
+{responsibilities}
+"""
+
 
 def classify_job_description(url: str) -> Posting:
     response = client.models.generate_content(
@@ -105,3 +135,26 @@ def score_job_match(posting: Posting, profile_path: str = "profile.txt") -> dict
         print("Warning: could not parse score response as JSON")
         print("Raw response:", raw)
         return {"match_score": None, "reason": "Could not parse score."}
+    
+def generate_resume_points(posting: Posting, profile_path: str = "profile.txt") -> str:
+    try:
+        with open(profile_path, "r", encoding="utf-8") as f:
+            profile = f.read()
+    except FileNotFoundError:
+        return "Profile not found. Could not generate resume points."
+
+    prompt = RESUME_PROMPT.format(
+        profile=profile,
+        title=posting.title or "Unknown",
+        company=posting.company or "Unknown",
+        skills=", ".join(posting.skills),
+        qualifications=", ".join(posting.qualifications),
+        responsibilities=", ".join(posting.responsibilities),
+    )
+
+    response = client.models.generate_content(
+        model="gemini-3.5-flash",
+        contents=prompt
+    )
+
+    return response.text

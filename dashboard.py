@@ -1,7 +1,7 @@
 import streamlit as st
-import os
 from dotenv import load_dotenv
-from src.classifier import classify_job_description, score_job_match
+from src.classifier import classify_job_description, score_job_match, generate_resume_points
+from src.storage import save_posting, save_resume_points
 
 load_dotenv()
 
@@ -18,55 +18,70 @@ if st.button("Analyze"):
 
         with st.spinner("Scoring against profile..."):
             match = score_job_match(posting)
+        with st.spinner("Generating resume points..."):
+            resume_points = generate_resume_points(posting)
 
-        # Match score
-        score = match["match_score"]
-        color = "green" if score >= 70 else "orange" if score >= 40 else "red"
-        st.markdown(f"### Match Score: :{color}[{score}%]")
-        st.caption(match["reason"])
+        st.session_state["posting"] = posting
+        st.session_state["match"] = match
+        st.session_state["resume_points"] = resume_points
 
-        st.divider()
+if "posting" in st.session_state and "match" in st.session_state:
+    posting = st.session_state["posting"]
+    match = st.session_state["match"]
 
-        # Job details
-        col1, col2 = st.columns(2)
-        with col1:
-            st.markdown(f"**Title:** {posting.title}")
-            st.markdown(f"**Company:** {posting.company}")
-            st.markdown(f"**Location:** {posting.location}")
-        with col2:
-            st.markdown(f"**Type:** {posting.job_type}")
-            st.markdown(f"**Salary:** {posting.salary}")
-            st.markdown(f"**URL:** {posting.source_url}")
+    score = match["match_score"]
+    color = "green" if score >= 70 else "orange" if score >= 40 else "red"
+    st.markdown(f"### Match Score: :{color}[{score}%]")
+    st.caption(match["reason"])
 
-        st.divider()
+    st.divider()
 
-        col3, col4, col5 = st.columns(3)
-        with col3:
-            st.markdown("**Skills**")
-            for s in posting.skills:
-                st.markdown(f"- {s}")
-        with col4:
-            st.markdown("**Responsibilities**")
-            for r in posting.responsibilities:
-                st.markdown(f"- {r}")
-        with col5:
-            st.markdown("**Qualifications**")
-            for q in posting.qualifications:
-                st.markdown(f"- {q}")
+    col1, col2 = st.columns(2)
+    with col1:
+        st.markdown(f"**Title:** {posting.title}")
+        st.markdown(f"**Company:** {posting.company}")
+        st.markdown(f"**Location:** {posting.location}")
+    with col2:
+        st.markdown(f"**Type:** {posting.job_type}")
+        st.markdown(f"**Salary:** {posting.salary}")
+        st.markdown(f"**URL:** {posting.source_url}")
 
-        st.divider()
+    st.divider()
 
-        # Save button
-        if st.button("Save Posting"):
-            os.makedirs("outputs", exist_ok=True)
-            filename = f"outputs/{posting.company}_{posting.title}.txt".replace(" ", "_")
-            with open(filename, "w") as f:
-                f.write(f"Title:    {posting.title}\n")
-                f.write(f"Company:  {posting.company}\n")
-                f.write(f"Location: {posting.location}\n")
-                f.write(f"Type:     {posting.job_type}\n")
-                f.write(f"Salary:   {posting.salary}\n")
-                f.write(f"URL:      {posting.source_url}\n")
-                f.write(f"\nMatch Score: {score}%\n")
-                f.write(f"Match Reason: {match['reason']}\n")
-            st.success(f"Saved to {filename}")
+    col3, col4, col5 = st.columns(3)
+    with col3:
+        st.markdown("**Skills**")
+        for s in posting.skills:
+            st.markdown(f"- {s}")
+
+    with col4:
+        st.markdown("**Responsibilities**")
+        for r in posting.responsibilities:
+            st.markdown(f"- {r}")
+
+    with col5:
+        st.markdown("**Qualifications**")
+        for q in posting.qualifications:
+            st.markdown(f"- {q}")
+
+    st.divider()
+
+    if st.button("Save Posting"):
+        output_path = save_posting(posting, match)
+        st.success(f"Saved to {output_path}")
+
+    if "resume_points" in st.session_state:
+        resume_points = st.session_state["resume_points"]
+
+    st.divider()
+    st.subheader("AI Tailored Resume Points")
+
+    st.text_area(
+        "Resume Points",
+        resume_points,
+        height=350
+    )
+
+    if st.button("Save Resume Points"):
+        resume_path = save_resume_points(posting, resume_points)
+        st.success(f"Saved resume points to {resume_path}")
